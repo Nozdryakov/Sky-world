@@ -1,0 +1,712 @@
+*,*:before, *:after{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+html, body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.page{
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container{
+    max-width: 1400px;
+    width: 100%;
+    padding: 0 125px;
+    margin: 0 auto;
+}
+.slide__container{
+    width: 100%;
+}
+.header__link{
+    position: relative;
+}
+.header__link::before{
+    content: '';
+    position: absolute;
+    opacity: 0;
+    left: 0;
+    bottom: -5px;
+    height: 2px;
+    background: #40ACB6;
+    width: 100%;
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-delay: 0s;
+    transition-timing-function: linear;
+    box-sizing: border-box;
+}
+.header__link:hover::before{
+    opacity: 1;
+}
+.header {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 50;
+}
+.header:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: inset 0 1px 5px  #000;
+    z-index: 2;
+    box-sizing: border-box;
+}
+.call__link{
+    z-index: 2;
+    text-decoration: none;
+    font-size: 14px;
+    border: 1px #000000 solid;
+    padding: 6px;
+    border-radius: 35px;
+    color: #000000;
+    transition: all ease 0.3s;
+}
+.call__link:hover{
+    background: #000000;
+    color: #f2f2f2;
+}
+
+.header__body {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+}
+.header__list{
+    display: flex;
+    position: relative;
+    z-index: 2;
+}
+.header__list li{
+    list-style: none;
+    margin: 0 0 0 20px;
+}
+.header__logo {
+    font-family: Bangers;
+    font-size: 36px;
+    z-index: 3;
+    text-decoration: none;
+    color: #000000;
+}
+.header__burger {
+    display: none;
+}
+.header__link {
+    color: #000000;
+    font-size: 18px;
+    text-decoration: none;
+}
+.comic__block{
+    margin-top: 140px;
+    display: flex;
+    
+}
+.big__block{
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    width: 100%;
+    
+}
+.comic__item{
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    justify-content: space-between;
+}
+.n__one{
+    margin: 0;
+}
+.mini{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 0 15px;
+}
+.comic__img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+.comic__txtblock {
+    position: absolute;
+    background: rgba(58, 188, 202, 0.85);
+    bottom: 10px;
+    left: 15px;
+    padding: 5px 8px;
+    white-space: wrap;
+    overflow: hidden;
+    font-weight: bold;
+
+}
+.comic__name{
+    font-size: 16px;
+}
+.comic__text{
+    font-size: 13px;
+}
+.mini__item{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    position: relative;
+}
+.wraper__item{
+    display: flex;
+    flex-direction: row;
+}
+
+
+.wrapper{
+	height: 100%;
+	margin-top: 115px;
+	display: flex;
+	justify-content:center;
+    align-items: center;
+    min-width: 0;
+    
+}
+.marvel{
+    margin-top: 90px;
+}
+
+/* Слайдер */
+    .slick-slider{
+        min-width: 0;
+    }
+    /* Слайдер запущен */
+.slick-slider.slick-initialized{}
+    /* Слайдер с точками */
+.slick-slider.slick-dotted{}
+
+    /* Ограничивающая оболочка */
+.slick-list {
+    overflow: hidden;
+}
+    /* Лента слайдов */
+.slick-track{
+    display: flex;
+    align-items: flex-start;
+} 
+
+    /* Слайд */
+.slick-slide{}
+    /* Слайд активный (показывается) */
+.slick-slide.slick-active{}
+    /* Слайд основной */
+.slick-slide.slick-current{}
+    /* Слайд по центру */
+.slick-slide.slick-center{
+    
+}
+    /* Клонированный слайд */
+.slick-slide.slick-cloned{}
+
+    /* Стрелка */
+.slick-arrow{}
+    /* Стрелка влево */
+.slick-arrow.slick-prev{}
+    /* Стрелка вправо */
+.slick-arrow.slick-next{}
+    /* Стрелка не активная */
+.slick-arrow.slick-disabled{
+    
+} 
+
+    /* Точки (булиты) */
+.slick-dots{}
+.slick-dots li{}
+    /* Активная точка */
+.slick-dots li.slick-active{}
+    /* Элемент точки */
+.slick-dots li button{} 
+
+.slider{
+    position: relative;
+    padding: 35px 50px;
+    background: #40ACB6;
+    border: 1px solid #40ACB6;
+}
+.slider .slick-arrow{
+    position: absolute;
+    top: 50%;
+    z-index: 30;
+    font-size: 0;
+    margin: -40px 0 0 0;
+    width: 60px;
+    height: 80px;
+    border: none;
+    outline: none;
+    opacity: 0.7;
+    
+}
+.slider__item{
+    position: relative;
+}
+.slider .slick-arrow.slick-prev{
+    left: 0;
+    background: url("../Комикс/img/arrow.png") 0 0 / 100% no-repeat;
+    transform: rotate(180deg);
+}
+   
+.slider .slick-arrow.slick-next{
+    right: 0;
+    background: url("../Комикс/img/arrow.png") 0 0 / 100% no-repeat;
+    bottom:0;
+}
+
+
+.slider .slick-dots{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slider .slick-dots li{
+    list-style: none;
+    margin: 0 10px;
+}
+.slider .slick-dots button{
+    font-size: 0;
+    width: 10px;
+    height: 10px;
+    background-color: #000000;
+    border-radius: 50%;
+}
+.slider .slick-dots li.slick-active button{
+    background-color: wheat;
+    border: 1px solid #000000;
+}
+
+.slider__item{
+    text-align: center;
+    transition: all 0.3 ease 0s;
+
+}
+.slider__item img{
+    margin-bottom: 20px;
+}
+.slider__link{
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    color: #000000;
+    font-size: 14px;
+    padding: 5px 20px;
+    background: rgba(156, 157, 157, 0.5);
+    border: 1px solid #000000;
+    border-radius: 35px;
+    transition: all ease 0.3s;
+}
+.buy__link{
+    display: flex;
+    justify-content: center;
+}
+.slider__link:hover{
+    background:#E5E5E5;
+}
+.buy__link span{
+    margin-left: 3px;
+}
+.buy__link span::before{
+    content: "-";
+    margin-right: 3px;
+}
+.logo__slider {
+    position: relative;
+    z-index: 40;
+}
+.logoSlider__img {
+    width: 60px; 
+    display: block;
+    height: auto;
+    margin: -25px auto;   
+}
+.marvel__img{
+    width: 150px;
+    margin: -18px auto; 
+}
+.sale__block{
+    margin-top: 100px;
+    text-align: center;
+}
+.block__sale{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.block__sale img{
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+.sale__img{
+    opacity: 0.4;
+}
+.txt__sale{
+    position: absolute;
+    z-index: 10;
+    top: 35%;
+    font-size: 64px;
+    font-family:  Russo One;
+    color: #000000;
+    text-transform: uppercase;   
+}
+.cards__block {
+    margin-top: 70px;
+}
+.block__cards {
+    
+}
+.mini__blockitem {
+    display: flex;  
+    width: 100%;  
+    position: relative;
+    justify-content:space-between; 
+    padding: 30px 0;
+}
+.card__itemok {
+    width: 30%;
+    position: relative;
+}
+.cards__txt{
+    position: absolute;
+    background: rgba(58, 188, 202, 0.85);
+    bottom: 10px;
+    margin-left: 12px;
+    white-space: wrap;
+    overflow: hidden;
+    font-weight: bold;
+    padding: 5px 8px;
+    font-size: 14px;
+
+}
+.card__itemok img{
+    max-width: 100%;
+    height: 100%;
+    display: block;
+}
+.block__last{
+    width: 100%;
+    height: 90vh;
+    overflow: hidden;
+    background-image:url(img/fon.jpg);
+}
+.last__block {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.txt__last {
+    width: 450px;
+    height: 170px;
+    margin: 40vh auto;
+    display: flex;
+    align-items: center;
+    opacity: 0.9;    
+    border: 1px solid #40ACB6;
+    padding-right: 40px;
+    border-radius: 20px;
+    background: #f2f2f2;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+}
+.contact__last {
+    padding: 45px;
+    
+}
+.contact__last img{
+    width: 100px;
+    height: 100px;
+}
+.text__last {
+    background:  #40ACB6;
+    padding: 40px 10px 40px 40px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+
+}
+.footer{
+    padding: 20px;
+    background-image:url(img/footer.png);
+    margin-top: auto;
+}
+.content__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    color: #f2f2f2;
+}
+.foot{
+    background: rgba(58, 188, 202, 0.85);
+    padding: 12px;
+    border-radius: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+/*----------------------Адаптив----------------------*/
+@media(max-width: 880px){
+    .container{
+    max-width: 1400px;
+    width: 100%;
+    padding: 0 80px;
+    margin: 0 auto;
+    }
+    .big__block{
+        flex-wrap: wrap;
+        justify-content: space-between;
+        
+    }
+    .comic__item{
+        margin-top: 20px;
+
+    }
+    .comic__block{
+        margin-top: 70px;
+    }
+    .wraper__item{
+        justify-content: space-between;
+        width: 100%;
+    }
+    .mini{
+        padding: 0;
+    }
+    .block__cards{
+        justify-content: center;
+    }
+    .mini__blockitem{
+        flex-wrap: wrap;   
+        padding:0;     
+    }
+    .card__itemok {
+        width: 100%;
+        display: flex;
+        height: auto;
+        justify-content: center;
+        margin-top: 10px;
+    }
+    .card__itemok img{
+        width: 400px;
+    }
+    .cards__txt{
+        bottom: 5px;
+    }
+    .cards__block {
+        margin-top: 30px;
+    }
+}
+@media (max-width: 775px){
+    body.lock{
+        overflow: hidden;
+    }
+    .header__body{
+        height: 50px;
+    }
+    .header__logo{
+        font-size: 24px;
+    }
+    .header__burger{
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+        z-index: 3;
+    }
+    .header__burger:before,
+    .header__burger:after{
+        content: '';
+        background-color: #000000;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        transition: all 0.3s ease 0s;
+        box-sizing: border-box;
+    }
+    .header__burger:before{
+        top: 0;
+        
+    }
+    .header__burger:after{
+        bottom: 0;
+    }
+    .header__burger span{
+        position: absolute;
+        background-color: #000000;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        top: 9px;
+    }
+    .header__menu {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #40ACB6;;
+        padding: 70px 10px 20px 10px;
+        transition: all 0.3s ease 0s;
+        overflow: auto;
+        box-sizing: border-box;
+    }
+    .header__menu.active{
+        top: 0;
+    }
+    .header__list{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .header__list li{
+        margin: 0 0 20px 0;
+    }
+    .header__burger.active:before{
+        transform: rotate(45deg);
+        top: 9px;
+    }
+    .header__burger.active:after{
+        transform: rotate(-45deg);
+        bottom: 9px;
+    }
+    .header__burger.active span{
+        transform: scale(0) ;
+    }
+    .header__link{
+        font-size: 24px;
+    }
+    .call__link{
+        font-size: 12px;
+        box-sizing: border-box;
+    }
+    .txt__sale{
+        font-size: 50px;
+    }
+    .foot{
+        width: 60%;
+        margin-top: 5px;
+        text-align: center;
+    }
+    .content__footer{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+@media(max-width: 645px){
+    .container{
+        max-width: 1400px;
+        width: 100%;
+        padding: 0 20px;
+        margin: 0 auto;
+    }
+    .comic__item{
+        padding: 10px;
+        
+    }
+    .mini__item{
+        justify-content: space-between;
+    }
+    .wraper__item{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        padding: 0;
+    }
+    .one__wrap{
+        width: 100%;
+    }
+    .comic__txtblock{
+        font-size: 12px;
+    }
+    .wrapper{
+        margin-top: 80px;
+    }
+    .txt__sale{
+        font-size: 40px;
+    }
+    .sale__block{
+        margin-top: 60px;
+    }
+    .txt__last {
+        flex-direction: column;
+        padding: 0;
+        margin: 25vh auto;
+        width: 80%;
+        height: auto;
+    }
+    .text__last{
+        padding: 25px;
+    }
+    .foot{
+        width: 100%;
+        font-size: 13px;
+    }
+
+}
+@media(max-width: 480px){
+    .wrapper{
+        margin-top: 30px;
+    }
+    .container{
+    max-width: 1400px;
+    width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+    }
+    .comic__item{
+        padding: 0 4px;
+    }
+    .comic__item{
+        margin-top: 6px;
+
+    }
+    .comic__txtblock{
+        left: 15px;
+        padding: 3px 5px;
+        bottom: 6px;
+        overflow: hidden;
+        max-width: 200px;
+    }
+    .wrap__text{
+        bottom:5px;
+        
+    }
+    .comic__name{
+        font-size: 10px;
+    }
+    .comic__text{
+        font-size: 9px;
+        font-weight: 300;
+    }
+    .txt__sale{
+        font-size: 25px;
+    }
+    .sale__block{
+        margin-top: 30px;
+    }
+    .cards__txt{
+        font-size: 13px;
+    }
+    
+}
